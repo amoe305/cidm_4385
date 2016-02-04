@@ -1,0 +1,61 @@
+<html ng-app="AngluarJSAssignment1">
+    <head>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular.min.js"></script>
+                <script lang="javascript">
+                
+                    var myModule = angular.module('AngularJSAssigment1', []);
+                    
+                    myModule.controller('CostController',
+                        
+                        function ($scope)
+                        {
+                            var cc = this;
+                            
+                            cc.cost = 0.0;
+                            
+                            cc.tip_options = 
+                            [
+                                {amount:0.10, name:"10%"},
+                                {amount:0.15, name:"15%"},
+                                {amount:0.20, name:"20%"}
+                            ];
+                            
+                            cc.tax_options =
+                            [
+                                {amount:0.05, name:"Florida"},
+                                {amount:0.06, name:"California"},
+                                {amount:0.07, name:"New York"},
+                                {amount:0.08, name:"Texas"},
+                                {amount:0.09, name:"Alabama"}
+                            ];
+                            
+                            cc.tax = cc.tax_options[0];
+                            cc.tip = cc.tip_options[0];
+                            
+                            cc.total = cc.cost + cc.tax.amount + cc.tip.amount;
+                            
+                            cc.final_bill = 0.0;
+                            cc.add = function add()
+                            {
+                                cc.final_bill += cc.total;
+                            }
+                            
+                        }
+                        );
+                
+                </script>
+    </head>
+    <body>
+        <div ng-controller = "Cost controller as cc">
+            <p>
+                Cost: <input type="text" ng-model="cc.cost" placeholder="cost" /></br>
+                Tax: <select type="text" ng-model="cc.tax" ng-options="t.name for t in cc.tax_options"></select><br/>
+                Tip: <select type="Text" ng-model="cc.tip" ng-options="t.name for t in cc.tip_options"></select>
+            </p>
+            <p ng-show="cc.final_bill">
+                Your final bill is {{cc.final_bill|currency}}
+                <button ng-click="cc.add()">Add</button>
+            </p>
+        </div>
+    </body>
+</html>
