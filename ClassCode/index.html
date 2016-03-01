@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='weatherApp'>
+    <head>
+        <title>Weather App</title>
+    </head>
+    
+    <body ng-controller="WeatherController as wc">
+        <select ng-model="wc.selected_city" 
+                ng-options="city.name for city in wc.cities" 
+                ng-change="wc.getCurentConditions()">
+            
+        </select>
+        
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

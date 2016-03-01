@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='Assignment3'>
+    <head>
+        <title>Quiz Me</title>
+    </head>
+    
+    <body ng-controller='QuizController as qz'>
+        <button type="button" ng-click="qz.getStudent.name()">Get Student</button>
+        <p>{{qz.selectedStudent}}</p>
+        
+        <button type="button" ng-click="qz.getQuestion.question()">Get Question</button>
+        <p>{{qz.selectedQuestion}}</p>
+        <p>{{qz.selectedQuestion.answer}}</p>
+        
+        <button type="button" ng-click="qz.CorrectAnswer()">Correct</button>
+        <button type="button" ng-click="qz.wrongAnswer()">Incorrect</button>
+        
+        <script src="Assignment3/angular.min.js"></script>
+        <script lang="text/javascript" src="Assignment3/quiz.js"></script>
+    </body>
+</html>

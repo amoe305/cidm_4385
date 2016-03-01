@@ -1,0 +1,11 @@
+<p><img src="{{wsc.google_static_maps_url}}"</p>
+
+myModule.directive('myConditions', function()
+{
+    return
+    {
+        restrict: 'E',
+        scope: true,
+        templateUrl: 'currentConditions.html
+    }
+});

@@ -1,0 +1,10 @@
+{
+    "questions": 
+    [
+        {question: "What goes into the beginning html tag if you want to use AngularJS?", answer: "ng-app"},
+        {question: "How many contollers can you have with AngularJS?", answer: "as many as you want"},
+        {question: "Why are we learning AngularJS?", answer: "so we can use Ionic"},
+        {question: "Is Ionic built on top of AngularJS?", answer: "yes"},
+        {question: "Is scope required when using AngularJS?", answer: "yes"}
+    ]
+}
